@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>BartVision - Home</title>
+    <title>BartVision - Login</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -39,55 +39,58 @@
       class="container d-flex justify-content-center align-items-center vh-100"
     >
       <div
-        class="card shadow d-flex flex-row"
-        style="width: 48rem; height: 24rem"
+        class="card"
+        style="width: 48rem;"
       >
+      <div class="row">
         <!-- Left Column: Image -->
-        <div class="col-6">
-          <img
+        <div class="col-md-6">
+            <img
             src="../assets/bartvision-logo.png"
             alt="BartVision Logo"
-            class="img-fluid h-100 w-100"
+            class="img-fluid h-100 w-100 d-none d-md-block"
             style="
               object-fit: cover;
               border-top-left-radius: 0.25rem;
               border-bottom-left-radius: 0.25rem;
             "
-          />
+            />
         </div>
         <!-- Right Column: Form -->
-        <div class="col-6 p-4">
-          <h1 class="card-title text-center mb-4">Login</h1>
-            <form action="/login" method="POST"></form>
-            <div class="mb-3">
-              <label for="username" class="form-label">Username:</label>
-              <input
-              type="text"
-              id="username"
-              name="username"
-              class="form-control"
-              required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password:</label>
-              <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              required
-              />
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-dark">Login</button>
-            </div>
+        <div class="col-md-6 p-5 p-md-4">
+          <h1 class="text-center mb-4">Login</h1>
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control"
+                required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                required
+                />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-dark">Login</button>
+              </div>
+              </form>
+              <div class="text-center mt-3">
+                Don't have an account?
+              <a href="/milestone/pages/register.html" class="text-decoration-none"> Register here</a>
+              </div>
             </form>
-            <div class="text-center mt-3">
-              Don't have an account?
-            <a href="/pages/register.html" class="text-decoration-none"> Register here</a>
-            </div>
         </div>
+      </div>
       </div>
     </main>
   </body>
