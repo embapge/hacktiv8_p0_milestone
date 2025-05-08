@@ -1,0 +1,122 @@
+<?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+  header("Location: http://localhost/milestone");
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>BartVision - Register</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <!-- Bootstrap icons-->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link href="../css/custom.css" rel="stylesheet" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body
+  style="
+      background: linear-gradient(to bottom, rgb(48, 48, 48), rgb(54, 54, 54));
+    ">
+  <main
+    class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow" style="width: 48rem">
+      <!-- Right Column: Form -->
+      <div class="col-12 p-4">
+        <h1 class="card-title text-center mb-4">Register</h1>
+        <form action="../controllers/register-action.php" method="POST">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              value="<?php echo (array_key_exists('old_email', $_SESSION) && !empty($_SESSION['old_email'])) ? htmlspecialchars($_SESSION['old_email']) : ''; ?>"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-control"
+              value="<?php echo (array_key_exists('old_username', $_SESSION) && !empty($_SESSION['old_username'])) ? htmlspecialchars($_SESSION['old_username']) : ''; ?>"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-control"
+              pattern="[0-9]{10,14}"
+              title="Please enter a valid phone number, optionally starting with a '+' and up to 15 digits."
+              value="<?php echo (array_key_exists('old_phone', $_SESSION) && !empty($_SESSION['old_phone'])) ? htmlspecialchars($_SESSION['old_phone']) : ''; ?>"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              class="form-control"
+              required />
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-dark">Register</button>
+          </div>
+        </form>
+        <div class="text-center mt-3">
+          Already have an account?
+          <a href="/milestone/pages/login.php" class="text-decoration-none">Login here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/register.js"></script>
+</body>
+
+</html>
+
+<?php
+// Unset session variables
+unset($_SESSION['old_email']);
+unset($_SESSION['old_username']);
+unset($_SESSION['old_phone']);
+?>

@@ -317,3 +317,23 @@ function resetForm(form) {
     form.reset();
   }
 }
+
+function generateInsertQueries(data) {
+  const tableName = "products";
+  const insertQuery = `INSERT INTO ${tableName} (id, name, description, category, brand, color, price, stock, image_url) VALUES 
+    (1, 'Canon 700D', 'A versatile DSLR camera perfect for beginners and enthusiasts.', 'camera', 'canon', 'black', 7500000, 10, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (2, 'Canon 5D', 'A professional-grade DSLR camera for advanced photographers.', 'camera', 'canon', 'black', 25000000, 3, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (3, 'Nikon D3500', 'A compact and easy-to-use DSLR camera for everyday photography.', 'camera', 'nikon', 'black', 8500000, 8, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (4, 'Sony Alpha A7 III', 'A full-frame mirrorless camera designed for professionals.', 'camera', 'sony', 'mixcolor', 32000000, 5, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (5, 'Fujifilm X-T4', 'A high-performance mirrorless camera with advanced features.', 'camera', 'fujifilm', 'white', 20000000, 7, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (6, 'Canon EF 50mm f/1.8', 'A lightweight and affordable lens for stunning portraits.', 'lens', 'canon', 'black', 1500000, 15, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (7, 'Nikon AF-S DX 35mm f/1.8G', 'A prime lens with excellent sharpness and low-light performance.', 'lens', 'nikon', 'black', 2500000, 12, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (8, 'Godox SL60W', 'A powerful and affordable LED light for studio photography.', 'lighting', 'godox', 'white', 1200000, 20, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (9, 'Manfrotto Compact Action Tripod', 'A lightweight and portable tripod for travel photography.', 'tripod', 'manfrotto', 'mixcolor', 800000, 10, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (10, 'Sony GP-VPT2BT', 'A wireless shooting grip and tripod for vlogging.', 'tripod', 'sony', 'black', 1500000, 6, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (11, 'Neewer 660 LED Video Light', 'A versatile LED light for video and photography.', 'lighting', 'neewer', 'black', 1800000, 15, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (12, 'Aputure Amaran AL-M9', 'A compact and portable LED light for on-the-go shooting.', 'lighting', 'aputure', 'white', 900000, 25, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (13, 'Joby GorillaPod 3K Kit', 'A flexible tripod for creative photography angles.', 'tripod', 'joby', 'black', 1200000, 8, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180'),
+    (14, 'Benro TMA28A Mach3', 'A durable and stable tripod for professional use.', 'tripod', 'benro', 'black', 2500000, 5, 'https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180');`;
+  console.log(insertQuery);
+}

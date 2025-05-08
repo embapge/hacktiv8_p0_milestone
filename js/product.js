@@ -242,6 +242,10 @@ function clearFilterCriteria(products) {
 
   refrestProductCatalog(products);
   localStorage.removeItem("filterCriteria");
+
+  const breadcrumbItem = document.querySelector(
+    ".product-catalog .breadcrumb li:last-child"
+  );
   breadcrumbItem.textContent = "All";
 }
 

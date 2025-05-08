@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>BartVision - Contact Us</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <!-- Bootstrap icons-->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link href="../css/custom.css" rel="stylesheet" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/milestone"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 ps-md-5">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/milestone">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/milestone/pages/product.php">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/milestone/pages/gallery.php">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/milestone/pages/about-us.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/milestone/pages/contact-us.php">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/milestone/pages/login.php">Login</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-outline-primary"
+              aria-current="page"
+              href="/milestone/pages/register.php">Register</a>
+          </li>
+          <li class="nav-item active">
+            <a
+              href="/milestone/pages/cart.php"
+              class="btn btn-outline-secondary active">
+              <i class="bx bx-cart-alt"></i>
+              <small class="badge badge-light cart-count"></small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content-->
+  <main class="row p-3 p-md-5">
+    <!-- Left Column -->
+    <div class="col-md-6 mb-4">
+      <h2 class="mb-5">Contact Us</h2>
+      <p>
+        Have questions or want to know more about our photo and videography
+        products? Fill out the form, and we'll get back to you as soon as possible.
+      </p>
+    </div>
+    <!-- Right Column -->
+    <div class="col-md-6 p-md-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-center">Contact Form</h5>
+          <form action="../controllers/contact-us-action.php" method="POST" id="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="full_name"
+                name="full_name"
+                placeholder="Enter your full name"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="subject"
+                placeholder="Enter the subject"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                name="message"
+                placeholder="Write your message here"
+                required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer-->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        Copyright &copy; BartVision 2025
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/all.js"></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="../js/contact-us.js"></script>
+  <script src="../js/scripts.js"></script>
+</body>
+
+</html>

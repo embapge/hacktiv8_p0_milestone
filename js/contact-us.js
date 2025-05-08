@@ -1,26 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let form = document.querySelector("form");
-  let payButton = form.querySelector("#reset_form");
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("error") === "database_error") {
+    Swal.fire({
+      icon: "error",
+      title: "OOps!",
+      text: "There was an error processing your request. Please try again later.",
+    });
+  } else if (urlParams.get("success") === "message_sent") {
+    Swal.fire({
+      icon: "success",
+      title: "Message Sent",
+      text: "Your message has been sent successfully.",
+    });
+  }
 
-  payButton.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default form reset behavior
-    if (form.checkValidity()) {
-      // return true/false https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity
-      // Check if form passes validation
-      resetForm(form);
-      Swal.fire({
-        title: "Success!",
-        text: "Your contact form has been submitted successfully.",
-        icon: "success",
-        confirmButtonColor: "#100c08",
-      });
-    } else {
-      Swal.fire({
-        title: "Error!",
-        text: "Please fill out the form correctly before submitting.",
-        icon: "error",
-        confirmButtonColor: "#d33",
-      });
-    }
-  });
+  const newUrl = window.location.origin + window.location.pathname;
+  window.history.replaceState({}, document.title, newUrl);
 });
