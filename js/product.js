@@ -3,11 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const savedFilterCriteria = localStorage.getItem("filterCriteria");
   if (savedFilterCriteria) {
-    const { category, selectedBrands, selectedColors, minPrice, maxPrice } =
-      JSON.parse(savedFilterCriteria);
+    const {
+      name,
+      category,
+      selectedBrands,
+      selectedColors,
+      minPrice,
+      maxPrice,
+    } = JSON.parse(savedFilterCriteria);
 
     let filteredProducts = filterProduct(
       products,
+      name,
       category,
       selectedBrands,
       selectedColors,
@@ -62,60 +69,69 @@ document.addEventListener("DOMContentLoaded", function () {
     refrestProductCatalog(products);
   }
 
-  const filterButton = document.querySelector("#applyFilter");
-  filterButton.addEventListener("click", function () {
-    const category = document.querySelector(
-      "input[name=filter_category]:checked"
-    ).value;
+  const filterButtons = document.querySelectorAll("button[name=apply_filter]");
+  filterButtons.forEach((filterButton) => {
+    filterButton.addEventListener("click", function () {
+      console.log("masuk");
+      const name = document.querySelector("input[name=search_filter]").value;
 
-    const brandCheckboxes = document.querySelectorAll(
-      "input[name=filter_brand]:checked"
-    );
-    const colorCheckboxes = document.querySelectorAll(
-      "input[name=filter_color]:checked"
-    );
+      const category = document.querySelector(
+        "input[name=filter_category]:checked"
+      ).value;
 
-    const selectedBrands = Array.from(brandCheckboxes).map(
-      (checkbox) => checkbox.value
-    );
-    const selectedColors = Array.from(colorCheckboxes).map(
-      (checkbox) => checkbox.value
-    );
+      const brandCheckboxes = document.querySelectorAll(
+        "input[name=filter_brand]:checked"
+      );
+      const colorCheckboxes = document.querySelectorAll(
+        "input[name=filter_color]:checked"
+      );
 
-    const minPriceInput = document.querySelector(
-      "input[name=filter_min_price]"
-    );
-    const maxPriceInput = document.querySelector(
-      "input[name=filter_max_price]"
-    );
-    const minPrice = minPriceInput.value
-      ? parseFloat(minPriceInput.value)
-      : null;
-    const maxPrice = maxPriceInput.value
-      ? parseFloat(maxPriceInput.value)
-      : null;
+      const selectedBrands = Array.from(brandCheckboxes).map(
+        (checkbox) => checkbox.value
+      );
+      const selectedColors = Array.from(colorCheckboxes).map(
+        (checkbox) => checkbox.value
+      );
 
-    // Save filter criteria to localStorage
-    localStorage.setItem(
-      "filterCriteria",
-      JSON.stringify({ category, selectedBrands, minPrice, maxPrice })
-    );
+      const minPriceInput = document.querySelector(
+        "input[name=filter_min_price]"
+      );
 
-    let filteredProducts = filterProduct(
-      products,
-      category,
-      selectedBrands,
-      selectedColors,
-      minPrice,
-      maxPrice
-    );
+      const maxPriceInput = document.querySelector(
+        "input[name=filter_max_price]"
+      );
 
-    updateBreadCrumb(category);
+      const minPrice = minPriceInput.value
+        ? parseFloat(minPriceInput.value)
+        : null;
 
-    refrestProductCatalog(filteredProducts);
+      const maxPrice = maxPriceInput.value
+        ? parseFloat(maxPriceInput.value)
+        : null;
+
+      // Save filter criteria to localStorage
+      localStorage.setItem(
+        "filterCriteria",
+        JSON.stringify({ name, category, selectedBrands, minPrice, maxPrice })
+      );
+
+      let filteredProducts = filterProduct(
+        products,
+        name,
+        category,
+        selectedBrands,
+        selectedColors,
+        minPrice,
+        maxPrice
+      );
+
+      updateBreadCrumb(category);
+
+      refrestProductCatalog(filteredProducts);
+    });
   });
 
-  const clearFilterButton = document.querySelector("#clearFilter");
+  const clearFilterButton = document.querySelector("button[name=clear_filter]");
   clearFilterButton.addEventListener("click", function () {
     clearFilterCriteria(products);
   });
@@ -123,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function filterProduct(
   products,
+  name,
   category,
   selectedBrands = [],
   selectedColors = [],
@@ -138,8 +155,10 @@ function filterProduct(
     const priceMatch =
       (minPrice === null || product.price >= minPrice) &&
       (maxPrice === null || product.price <= maxPrice);
+    const nameMatch =
+      !name || product.name.toLowerCase().includes(name.toLowerCase());
 
-    return categoryMatch && brandMatch && colorMatch && priceMatch;
+    return categoryMatch && brandMatch && colorMatch && priceMatch && nameMatch;
   });
   return filteredProducts;
 }

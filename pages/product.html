@@ -190,6 +190,62 @@
                         value="sony"
                       /><a class="nav-link p-1" href="">Sony</a>
                     </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="manfrotto"
+                      /><a class="nav-link p-1" href="">Manfrotto</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="godox"
+                      /><a class="nav-link p-1" href="">Godox</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="neewer"
+                      /><a class="nav-link p-1" href="">Neewer</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="aputure"
+                      /><a class="nav-link p-1" href="">Aputure</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="neewer"
+                      /><a class="nav-link p-1" href="">Neewer</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="joby"
+                      /><a class="nav-link p-1" href="">Joby</a>
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="benro"
+                      /><a class="nav-link p-1" href="">Benro</a>
+                    </li>
                   </ol>
                 </div>
                 <div class="color-wrapper ps-2">
@@ -245,10 +301,10 @@
                   </div>
                 </div>
                 <div class="justify-content-center d-flex gap-2">
-                  <button class="btn btn-dark" id="applyFilter">
+                  <button class="btn btn-dark" name="apply_filter">
                     Apply Filter
                   </button>
-                  <button class="btn btn-secondary" id="clearFilter">
+                  <button class="btn btn-secondary" name="clear_filter">
                     <i class="bx bx-trash"></i>
                   </button>
                 </div>
@@ -279,10 +335,15 @@
                 type="text"
                 class="form-control"
                 placeholder="Find a product.."
+                name="search_filter"
               />
-              <span class="input-group-text" id="basic-addon1"
-                ><i class="bx bx-search-alt"></i
-              ></span>
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                name="apply_filter"
+              >
+                <i class="bx bx-search-alt"></i>
+              </button>
             </div>
           </div>
         </div>
