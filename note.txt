@@ -1,0 +1,9 @@
+Produk:
+- id
+- name
+- description
+- Category (camera, lensa, lighting, tripod).
+- Merk (canon, nikon, fujifilm, sony).
+- Color (black, white, mixcolor).
+- price.
+- imge url.
