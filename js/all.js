@@ -160,7 +160,8 @@ function getProducts() {
       color: "black",
       price: 8500000,
       stock: 8,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.abc123&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 4,
@@ -171,7 +172,8 @@ function getProducts() {
       color: "mixcolor",
       price: 32000000,
       stock: 5,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.def456&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 5,
@@ -183,7 +185,8 @@ function getProducts() {
       color: "white",
       price: 20000000,
       stock: 7,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.ghi789&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 6,
@@ -194,7 +197,8 @@ function getProducts() {
       color: "black",
       price: 1500000,
       stock: 15,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.jkl012&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 7,
@@ -206,7 +210,8 @@ function getProducts() {
       color: "black",
       price: 2500000,
       stock: 12,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.mno345&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 8,
@@ -218,7 +223,8 @@ function getProducts() {
       color: "white",
       price: 1200000,
       stock: 20,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.pqr678&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 9,
@@ -229,7 +235,8 @@ function getProducts() {
       color: "mixcolor",
       price: 800000,
       stock: 10,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.stu901&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 10,
@@ -240,7 +247,8 @@ function getProducts() {
       color: "black",
       price: 1500000,
       stock: 6,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.vwx234&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 11,
@@ -251,7 +259,8 @@ function getProducts() {
       color: "black",
       price: 1800000,
       stock: 15,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.xyz123&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 12,
@@ -262,7 +271,8 @@ function getProducts() {
       color: "white",
       price: 900000,
       stock: 25,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.uvw456&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 13,
@@ -273,7 +283,8 @@ function getProducts() {
       color: "black",
       price: 1200000,
       stock: 8,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.abc789&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
     {
       id: 14,
@@ -284,7 +295,8 @@ function getProducts() {
       color: "black",
       price: 2500000,
       stock: 5,
-      image_url: "https://tse2.mm.bing.net/th?id=OIP.def012&pid=Api&P=0&h=180",
+      image_url:
+        "https://tse2.mm.bing.net/th?id=OIP.gUhiZTFcmRhS4zzspjKI0gHaGM&pid=Api&P=0&h=180",
     },
   ];
 }
