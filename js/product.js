@@ -250,5 +250,8 @@ function updateBreadCrumb(category) {
     ".product-catalog .breadcrumb li:last-child"
   );
 
-  breadcrumbItem.textContent = category && category !== "" ? category : "All";
+  breadcrumbItem.textContent =
+    category && category !== ""
+      ? category.charAt(0).toUpperCase() + category.slice(1)
+      : "All";
 }
