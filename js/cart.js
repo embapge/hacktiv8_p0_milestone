@@ -60,7 +60,7 @@ function loadCart(products, productCatalogWrapper) {
                       <td>${product.name}</td>
                       <td>${rupiahFormater(product.price)}</td>
                       <td>
-                        <div class="button-wrapper">
+                        <div class="button-wrapper text-nowrap">
                           <input type="hidden" name="product-value" value='${JSON.stringify(
                             product
                           )}'>
