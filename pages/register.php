@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user_id'])) {
-  header("Location: http://localhost/milestone");
+  header("Location: http://localhost/milestone/index.php");
   exit;
 }
 ?>
@@ -92,8 +92,8 @@ if (isset($_SESSION['user_id'])) {
             <label for="confirm-password" class="form-label">Confirm Password:</label>
             <input
               type="password"
-              id="confirm-password"
-              name="confirm-password"
+              id="confirm_password"
+              name="confirm_password"
               class="form-control"
               required />
           </div>

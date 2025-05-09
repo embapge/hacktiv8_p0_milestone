@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,18 +67,40 @@
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-
-              href="login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="btn btn-outline-primary"
-
-              href="register.php">Register</a>
-          </li>
+          <?php if (isset($_SESSION['user_id'])): ?>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bx bx-user-circle bx-sm"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <form method="post" action="../controllers/logout-action.php">
+                    <button type="submit" class="dropdown-item">Logout</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="login.php">Login</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-outline-primary"
+                href="register.php">Register</a>
+            </li>
+          <?php endif; ?>
           <li class="nav-item active">
             <a
               href="cart.php"

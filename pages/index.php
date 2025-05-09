@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +32,7 @@ session_start();
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <div class="container-fluid px-lg-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.php"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/milestone"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -52,59 +48,37 @@ session_start();
         id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ps-md-5">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="/milestone">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/product.php">Product</a>
+            <a class="nav-link" aria-current="page" href="/milestone/pages/product.php">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/gallery.php">Gallery</a>
+            <a class="nav-link" aria-current="page" href="/milestone/pages/gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/about-us.php">About Us</a>
+            <a class="nav-link" href="/milestone/pages/about-us.php">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/contact-us.php">Contact Us</a>
+            <a class="nav-link" href="/milestone/pages/contact-us.php">Contact Us</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
-          <?php if (isset($_SESSION['user_id'])): ?>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="userDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="bx bx-user-circle bx-sm"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li>
-                  <form method="post" action="controllers/logout-action.php">
-                    <button type="submit" class="dropdown-item">Logout</button>
-                  </form>
-                </li>
-              </ul>
-            </li>
-          <?php else: ?>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="pages/login.php">Login</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-primary"
-                href="pages/register.php">Register</a>
-            </li>
-          <?php endif; ?>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/milestone/pages/login.php">Login</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-outline-primary"
+              aria-current="page"
+              href="/milestone/pages/register.php">Register</a>
+          </li>
           <li class="nav-item active">
             <a
-              href="pages/cart.php"
+              href="/milestone/pages/cart.php"
               class="btn btn-outline-secondary active">
               <i class="bx bx-cart-alt"></i>
               <small class="badge badge-light cart-count"></small>
@@ -126,7 +100,7 @@ session_start();
           Temukan berbagai pilihan kamera dan perlengkapan fotografi terbaik
           dengan harga bersaing dan kualitas terjamin.
         </p>
-        <a class="btn btn-primary btn-lg" href="pages/product.php">Mulai berbelanja!</a>
+        <a class="btn btn-primary btn-lg" href="/milestone/pages/product.php">Mulai berbelanja!</a>
       </div>
     </div>
   </header>
@@ -204,6 +178,105 @@ session_start();
           </div>
         </div>
       </div>
+
+      <!-- <div class="container px-lg-5">
+           <div class="row gx-lg-5">
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-collection"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">Fresh new layout</h2>
+                   <p class="mb-0">
+                     With Bootstrap 5, we've created a fresh new layout for this
+                     template!
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-cloud-download"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">Free to download</h2>
+                   <p class="mb-0">
+                     As always, Start Bootstrap has a powerful collectin of free
+                     templates.
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-card-heading"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">Jumbotron hero header</h2>
+                   <p class="mb-0">
+                     The heroic part of this template is the jumbotron hero header!
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-bootstrap"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">Feature boxes</h2>
+                   <p class="mb-0">
+                     We've created some custom feature boxes using Bootstrap icons!
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-code"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">Simple clean code</h2>
+                   <p class="mb-0">
+                     We keep our dependencies up to date and squash bugs as they
+                     come!
+                   </p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-xxl-4 mb-5">
+               <div class="card bg-light border-0 h-100">
+                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                   <div
+                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                   >
+                     <i class="bi bi-patch-check"></i>
+                   </div>
+                   <h2 class="fs-4 fw-bold">A name you trust</h2>
+                   <p class="mb-0">
+                     Start Bootstrap has been the leader in free Bootstrap
+                     templates since 2013!
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div> -->
     </section>
   </main>
   <!-- Footer-->
@@ -218,8 +291,6 @@ session_start();
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/index.js"></script>
   <script src="js/all.js"></script>
   <script src="js/scripts.js"></script>
 </body>

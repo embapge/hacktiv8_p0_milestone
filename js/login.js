@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Registration Successful",
       text: "You can now log in with your credentials.",
     });
+  } else if (urlParams.get("success") === "successful_logout") {
+    Swal.fire({
+      icon: "success",
+      title: "Logout Successful",
+      text: "You have been logged out successfully.",
+    });
   }
 
   const newUrl = window.location.origin + window.location.pathname;

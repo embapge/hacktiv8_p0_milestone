@@ -3,8 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (urlParams.get("error") === "database_error") {
     Swal.fire({
       icon: "error",
-      title: "OOps!",
+      title: "Oops!",
       text: "There was an error processing your request. Please try again later.",
+    });
+  } else if (urlParams.get("error") === "all_fields_required") {
+    Swal.fire({
+      icon: "error",
+      title: "Oops!",
+      text: "All fields are required.",
     });
   } else if (urlParams.get("success") === "message_sent") {
     Swal.fire({
