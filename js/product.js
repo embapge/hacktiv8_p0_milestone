@@ -196,7 +196,7 @@ function refrestProductCatalog(products) {
                               product.price
                             )}</strong></p>
                         </div>
-                        <div class="button-wrapper">
+                        <div class="button-wrapper text-nowrap">
                             <button
                             value='${JSON.stringify(product)}'
                             class="btn bt-icon btn-primary add-to-cart"

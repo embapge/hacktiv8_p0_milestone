@@ -31,7 +31,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <div class="container-fluid px-lg-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/milestone"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.php"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -47,40 +47,37 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ps-md-5">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone">Home</a>
+            <a class="nav-link" href="../index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="/milestone/pages/product.php">Product</a>
+            <a class="nav-link active" aria-current="page" href="product.php">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone/pages/gallery.php">Gallery</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/milestone/pages/about-us.php">About Us</a>
+            <a class="nav-link" href="about-us.php">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/milestone/pages/contact-us.php">Contact Us</a>
+            <a class="nav-link" href="contact-us.php">Contact Us</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
           <li class="nav-item">
             <a
               class="nav-link active"
-              aria-current="page"
-              href="/milestone/pages/login.php">Login</a>
+
+              href="login.php">Login</a>
           </li>
           <li class="nav-item">
             <a
               class="btn btn-outline-primary"
-              aria-current="page"
-              href="/milestone/pages/register.php">Register</a>
+
+              href="register.php">Register</a>
           </li>
           <li class="nav-item active">
             <a
-              href="/milestone/pages/cart.php"
+              href="cart.php"
               class="btn btn-outline-secondary active">
               <i class="bx bx-cart-alt"></i>
               <small class="badge badge-light cart-count"></small>
@@ -91,244 +88,246 @@
     </div>
   </nav>
   <!-- Page Content-->
-  <main class="row p-3 px-lg-5">
-    <section class="col-md-3 mb-4">
-      <div class="card">
-        <div
-          class="card-header d-flex justify-content-between align-items-center">
-          <h2 class="mb-0">Filters</h2>
-          <button
-            class="btn btn-link text-decoration-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#filterCollapse"
-            aria-expanded="false"
-            aria-controls="filterCollapse">
-            <i class="bx bx-chevron-down"></i>
-          </button>
-        </div>
-        <div class="collapse" id="filterCollapse">
-          <div class="card-body">
-            <div class="category-wrapper">
-              <h2>Category</h2>
-              <ol class="navbar-nav ps-2">
-                <li class="nav-item">
-                  <input
-                    type="radio"
-                    value="all"
-                    name="filter_category"
-                    checked />
-                  All
-                </li>
-                <li class="nav-item">
-                  <input type="radio" value="camera" name="filter_category" />
-                  Camera
-                </li>
-                <li class="nav-item">
-                  <input type="radio" value="lens" name="filter_category" />
-                  Lens
-                </li>
-                <li class="nav-item">
-                  <input
-                    type="radio"
-                    value="lighting"
-                    name="filter_category" />
-                  Lighting
-                </li>
-                <li class="nav-item">
-                  <input type="radio" value="tripod" name="filter_category" />
-                  Tripod
-                </li>
-              </ol>
-            </div>
-            <hr />
-            <div class="filter-wrapper">
-              <h2>Filter</h2>
-              <div class="merk-wrapper ps-2">
-                <h3>Merk</h3>
-                <ol class="navbar-nav ps-1">
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="canon" /><a class="nav-link p-1" href="">Canon</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="fujifilm" /><a class="nav-link p-1" href="">Fujifilm</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="sony" /><a class="nav-link p-1" href="">Sony</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="manfrotto" /><a class="nav-link p-1" href="">Manfrotto</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="godox" /><a class="nav-link p-1" href="">Godox</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="neewer" /><a class="nav-link p-1" href="">Neewer</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="aputure" /><a class="nav-link p-1" href="">Aputure</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="neewer" /><a class="nav-link p-1" href="">Neewer</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="joby" /><a class="nav-link p-1" href="">Joby</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_brand"
-                      value="benro" /><a class="nav-link p-1" href="">Benro</a>
-                  </li>
-                </ol>
-              </div>
-              <div class="color-wrapper ps-2">
-                <h3>Color</h3>
-                <ol class="navbar-nav ps-1">
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_color"
-                      value="black" /><a class="nav-link p-1" href="">Black</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_color"
-                      value="white" /><a class="nav-link p-1" href="">White</a>
-                  </li>
-                  <li class="nav-item d-flex gap-1">
-                    <input
-                      type="checkbox"
-                      class="form-check"
-                      name="filter_color"
-                      value="mixcolor" /><a class="nav-link p-1" href="">Mixed Color</a>
-                  </li>
-                </ol>
-              </div>
-              <div class="price-wrapper ps-2">
-                <h3>Price</h3>
-                <div class="input-group mb-1">
-                  <span class="input-group-text" id="basic-addon1">From</span>
-                  <input
-                    type="number"
-                    min="0"
-                    class="form-control"
-                    name="filter_min_price"
-                    placeholder="Minimum price..." />
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">To</span>
-                  <input
-                    min="0"
-                    type="number"
-                    class="form-control"
-                    name="filter_max_price"
-                    placeholder="Maximum price..." />
-                </div>
-              </div>
-              <div class="justify-content-center d-flex gap-2">
-                <button class="btn btn-dark" name="apply_filter">
-                  Apply Filter
-                </button>
-                <button class="btn btn-secondary" name="clear_filter">
-                  <i class="bx bx-trash"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="product-catalog px-md-5 col-md-9">
-      <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/milestone">Home</a></li>
-          <li class="breadcrumb-item">
-            <a href="/milestone/pages/product.php">Product</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">All</li>
-        </ol>
-      </nav>
-      <div class="row mb-3">
-        <div class="col-md-8 mb-3">
-          <div class="">
-            <h2 class="mb-0">Product Catalog</h2>
-          </div>
-        </div>
-        <div class="col-md-4 align-content-end align-items-end mb-3">
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Find a product.."
-              name="search_filter" />
+  <main class="container-fluid p-3 px-lg-5">
+    <div class="row">
+      <section class="col-md-3 mb-4">
+        <div class="card">
+          <div
+            class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Filters</h2>
             <button
-              class="btn btn-outline-secondary"
+              class="btn btn-link text-decoration-none"
               type="button"
-              name="apply_filter">
-              <i class="bx bx-search-alt"></i>
+              data-bs-toggle="collapse"
+              data-bs-target="#filterCollapse"
+              aria-expanded="false"
+              aria-controls="filterCollapse">
+              <i class="bx bx-chevron-down"></i>
             </button>
           </div>
+          <div class="collapse" id="filterCollapse">
+            <div class="card-body">
+              <div class="category-wrapper">
+                <h2>Category</h2>
+                <ol class="navbar-nav ps-2">
+                  <li class="nav-item">
+                    <input
+                      type="radio"
+                      value="all"
+                      name="filter_category"
+                      checked />
+                    All
+                  </li>
+                  <li class="nav-item">
+                    <input type="radio" value="camera" name="filter_category" />
+                    Camera
+                  </li>
+                  <li class="nav-item">
+                    <input type="radio" value="lens" name="filter_category" />
+                    Lens
+                  </li>
+                  <li class="nav-item">
+                    <input
+                      type="radio"
+                      value="lighting"
+                      name="filter_category" />
+                    Lighting
+                  </li>
+                  <li class="nav-item">
+                    <input type="radio" value="tripod" name="filter_category" />
+                    Tripod
+                  </li>
+                </ol>
+              </div>
+              <hr />
+              <div class="filter-wrapper">
+                <h2>Filter</h2>
+                <div class="merk-wrapper ps-2">
+                  <h3>Merk</h3>
+                  <ol class="navbar-nav ps-1">
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="canon" />Canon
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="fujifilm" />Fujifilm
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="sony" />Sony
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="manfrotto" />Manfrotto
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="godox" />Godox
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="neewer" />Neewer
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="aputure" />Aputure
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="neewer" />Neewer
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="joby" />Joby
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_brand"
+                        value="benro" />Benro
+                    </li>
+                  </ol>
+                </div>
+                <div class="color-wrapper ps-2">
+                  <h3>Color</h3>
+                  <ol class="navbar-nav ps-1">
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_color"
+                        value="black" />Black
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_color"
+                        value="white" />White
+                    </li>
+                    <li class="nav-item d-flex gap-1">
+                      <input
+                        type="checkbox"
+                        class="form-check"
+                        name="filter_color"
+                        value="mixcolor" />Mixed Color
+                    </li>
+                  </ol>
+                </div>
+                <div class="price-wrapper ps-2">
+                  <h3>Price</h3>
+                  <div class="input-group mb-1">
+                    <span class="input-group-text" id="basic-addon1">From</span>
+                    <input
+                      type="number"
+                      min="0"
+                      class="form-control"
+                      name="filter_min_price"
+                      placeholder="Minimum price..." />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">To</span>
+                    <input
+                      min="0"
+                      type="number"
+                      class="form-control"
+                      name="filter_max_price"
+                      placeholder="Maximum price..." />
+                  </div>
+                </div>
+                <div class="justify-content-center d-flex gap-2">
+                  <button class="btn btn-dark" name="apply_filter">
+                    Apply Filter
+                  </button>
+                  <button class="btn btn-secondary" name="clear_filter">
+                    <i class="bx bx-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row" id="product-card"></div>
+      </section>
+      <section class="product-catalog px-md-5 col-md-9">
+        <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="product.php">Product</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">All</li>
+          </ol>
+        </nav>
+        <div class="row mb-3">
+          <div class="col-md-8 mb-3">
+            <div class="">
+              <h2 class="mb-0">Product Catalog</h2>
+            </div>
+          </div>
+          <div class="col-md-4 align-content-end align-items-end mb-3">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Find a product.."
+                name="search_filter" />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                name="apply_filter">
+                <i class="bx bx-search-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="product-card"></div>
 
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link active" href="#">1</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link active" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
   </main>
   <!-- Footer-->
   <footer class="py-5 bg-dark">

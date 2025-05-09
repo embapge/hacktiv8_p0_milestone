@@ -32,7 +32,7 @@
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <div class="container-fluid px-lg-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/milestone"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.php"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -48,37 +48,37 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ps-md-5">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone">Home</a>
+            <a class="nav-link" href="../index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone/pages/product.php">Product</a>
+            <a class="nav-link" href="product.php">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone/pages/gallery.php">Gallery</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/milestone/pages/about-us.php">About Us</a>
+            <a class="nav-link" href="about-us.php">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/milestone/pages/contact-us.php">Contact Us</a>
+            <a class="nav-link active" aria-current="page" href="contact-us.php">Contact Us</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
           <li class="nav-item">
             <a
               class="nav-link active"
-              aria-current="page"
-              href="/milestone/pages/login.php">Login</a>
+
+              href="login.php">Login</a>
           </li>
           <li class="nav-item">
             <a
               class="btn btn-outline-primary"
-              aria-current="page"
-              href="/milestone/pages/register.php">Register</a>
+
+              href="register.php">Register</a>
           </li>
           <li class="nav-item active">
             <a
-              href="/milestone/pages/cart.php"
+              href="cart.php"
               class="btn btn-outline-secondary active">
               <i class="bx bx-cart-alt"></i>
               <small class="badge badge-light cart-count"></small>
@@ -89,65 +89,67 @@
     </div>
   </nav>
   <!-- Page Content-->
-  <main class="row p-3 p-md-5">
-    <!-- Left Column -->
-    <div class="col-md-6 mb-4">
-      <h2 class="mb-5">Contact Us</h2>
-      <p>
-        Have questions or want to know more about our photo and videography
-        products? Fill out the form, and we'll get back to you as soon as possible.
-      </p>
-    </div>
-    <!-- Right Column -->
-    <div class="col-md-6 p-md-5">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title text-center">Contact Form</h5>
-          <form action="../controllers/contact-us-action.php" method="POST" id="contact-form">
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="full_name"
-                name="full_name"
-                placeholder="Enter your full name"
-                required />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required />
-            </div>
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input
-                type="text"
-                class="form-control"
-                id="subject"
-                name="subject"
-                placeholder="Enter the subject"
-                required />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="message"
-                rows="5"
-                name="message"
-                placeholder="Write your message here"
-                required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-dark">Submit</button>
-            </div>
-          </form>
+  <main class="container-fluid p-3 p-md-5">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6 mb-4">
+        <h2 class="mb-5">Contact Us</h2>
+        <p>
+          Have questions or want to know more about our photo and videography
+          products? Fill out the form, and we'll get back to you as soon as possible.
+        </p>
+      </div>
+      <!-- Right Column -->
+      <div class="col-md-6 p-md-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-center">Contact Form</h5>
+            <form action="../controllers/contact-us-action.php" method="POST" id="contact-form">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="full_name"
+                  name="full_name"
+                  placeholder="Enter your full name"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Enter the subject"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  name="message"
+                  placeholder="Write your message here"
+                  required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

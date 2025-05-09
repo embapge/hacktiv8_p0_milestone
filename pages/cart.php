@@ -32,7 +32,7 @@
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <div class="container-fluid px-lg-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/milestone"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.php"><i class="bx bx-camera bx-sm"></i><strong>BartVision</strong></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -48,33 +48,38 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ps-md-5">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone">Home</a>
+            <a class="nav-link" href="../index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone/pages/product.php">Product</a>
+            <a class="nav-link" href="product.php">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/milestone/pages/gallery.php">Gallery</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">About Us</a>
+            <a class="nav-link" href="about-us.php">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/milestone/pages/contact-us.php">Contact Us</a>
+            <a class="nav-link" href="contact-us.php">Contact Us</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#!">Login</a>
+            <a
+              class="nav-link active"
+
+              href="login.php">Login</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary">
-              Register
-            </button>
+            <a
+              class="btn btn-outline-primary"
+
+              href="register.php">Register</a>
           </li>
           <li class="nav-item active">
             <a
-              href="/milestone/pages/cart.php"
+              href="cart.php"
+              aria-current="page"
               class="btn btn-outline-secondary active">
               <i class="bx bx-cart-alt"></i>
               <small class="badge badge-light cart-count"></small>
@@ -85,7 +90,7 @@
     </div>
   </nav>
   <!-- Page Content-->
-  <main class="row px-md-5 container-fluid">
+  <main class="px-md-5 container-fluid">
     <div class="row">
       <h1>Cart</h1>
       <section class="list-product col-md-8 mb-3">
@@ -103,7 +108,7 @@
                     <th>Image</th>
                     <th>Product</th>
                     <th>Price</th>
-                    <th style="width: 20%">Quantity</th>
+                    <th>Quantity</th>
                     <th>Total</th>
                   </tr>
                 </thead>
