@@ -188,7 +188,7 @@ function refrestProductCatalog(products) {
                         ${product.description}
                         </p>
                         <div
-                        class="price-cart-wrapper d-flex align-items-center justify-content-between"
+                        class="price-cart-wrapper d-flex align-items-center justify-content-between flex-wrap"
                         >
                         <div class="price-wrapper">
                             <small class="text-muted">Price:</small>
@@ -242,6 +242,9 @@ function clearFilterCriteria(products) {
 
   refrestProductCatalog(products);
   localStorage.removeItem("filterCriteria");
+  const breadcrumbItem = document.querySelector(
+    ".product-catalog .breadcrumb li:last-child"
+  );
   breadcrumbItem.textContent = "All";
 }
 
